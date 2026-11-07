@@ -1,0 +1,15 @@
+{
+  "name": "Yogaveta",
+  "url": "https://yogaveta.com",
+  "staging": true,
+  "teacher": "Olivia Reardon",
+  "areas": ["Little Aston", "Shenstone", "Sutton Coldfield"],
+  "home": {
+    "venue": "Little Aston Village Hall",
+    "street": "Little Aston Lane",
+    "town": "Sutton Coldfield",
+    "postcode": "B74 3UF"
+  },
+  "instagram": "[Instagram handle]",
+  "maxGroup": 14
+}

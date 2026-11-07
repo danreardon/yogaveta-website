@@ -1,0 +1,6 @@
+# STAGING: nothing is indexed. At launch replace with:
+# User-agent: *
+# Allow: /
+# Sitemap: https://yogaveta.com/sitemap.xml
+User-agent: *
+Disallow: /

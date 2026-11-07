@@ -1,0 +1,6 @@
+[
+  { "date": "29 Nov", "plus": "wreaths", "with": "with a local florist", "action": "Book", "href": "#series" },
+  { "date": "[Jan 2027]", "plus": "clay", "with": "with [ceramicist]", "action": "Notify me", "href": "#notes", "proposed": true },
+  { "date": "[Feb 2027]", "plus": "cake", "with": "back by request", "action": "Notify me", "href": "#notes", "proposed": true },
+  { "date": "[Mar 2027]", "plus": "sourdough", "with": "with [baker]", "action": "Notify me", "href": "#notes", "proposed": true }
+]

@@ -1,0 +1,16 @@
+{
+  "name": "yogaveta-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Yogaveta: yoga with Olivia Reardon in Little Aston, Shenstone and on retreat",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "luxon": "^3.7.2"
+  }
+}

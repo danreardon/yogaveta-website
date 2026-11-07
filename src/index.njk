@@ -1,0 +1,82 @@
+---
+layout: layouts/base.njk
+title: "Yogaveta · Yoga in Little Aston, Shenstone and on retreat"
+description: "Slow vinyasa flow with Olivia Reardon in Little Aston and Shenstone, Sutton Coldfield. Weekly classes, yogaveta + experiences and retreats."
+---
+<section class="hero" aria-label="Welcome">
+  <div class="breath" aria-hidden="true"></div>
+  {# When the film is shot: put hero.mp4 and hero.jpg in src/assets/media and restore:
+  <video autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="/assets/media/hero.jpg"><source src="/assets/media/hero.mp4" type="video/mp4"></video> #}
+  <div class="shade" aria-hidden="true"></div>
+  {% include "partials/nav.njk" %}
+  <span class="film-note">[Looping film goes here, no sound]</span>
+  <div class="hero-foot wrap">
+    <h1>Move slowly. <em>Feel all of it.</em></h1>
+    <div class="hero-cta">
+      <a class="btn" href="#season">Find your session</a>
+      <small>Small rooms, never more than {{ site.maxGroup }} · book online</small>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="season" class="season wrap">
+    <div class="head"><h2>This <em>season</em></h2><a class="link" href="#season">All dates</a></div>
+    <div class="cards">
+      {% for s in season %}
+      <a class="card" href="{{ s.href }}"><div class="ph" style="background:var(--{{ s.tint }})"></div><span class="eyebrow">{{ s.when }} <span class="plus">+</span> {{ s.where }}</span><span class="t">{% if s.plus %}yogaveta <span class="plus">+</span> <em>{{ s.plus }}</em>{% else %}{{ s.title }}{% endif %}</span><span class="m">{{ s.meta }}</span></a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="series" class="series wrap">
+    <div class="intro">
+      <span class="big" aria-hidden="true">+</span>
+      <h2>yogaveta <em>plus</em></h2>
+      <p>One Sunday a month: a slow flow, then something made by hand with a local maker. Collect six and the seventh is on us.</p>
+      <a class="link" href="#series" style="color:var(--forest)">The series</a>
+    </div>
+    <div>
+      {% for e in series %}
+      <div class="row"><span class="d">{{ e.date }}</span><span class="n">+ {{ e.plus }} <small>{{ e.with }}</small></span><a href="{{ e.href }}">{{ e.action }}</a></div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="shop" class="shop wrap">
+    <div class="head"><h2>The <em>shop</em></h2><a class="link" href="#shop">Shop all</a></div>
+    <div class="products">
+      {% for p in shop %}
+      <div class="product"><div class="ph"></div><div class="top"><b>{{ p.name }}</b><span>{{ p.price }}</span></div><small>{{ p.note }}</small><a class="btn-line" href="#shop">Add to basket</a></div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="partners wrap" aria-label="Partners">
+    <span class="eyebrow">Made with</span>
+    <div><span>Footherley Alpacas</span><span>The Shires Florist</span><span>RSPB Sandwell Valley</span><span>[Partner brand]</span><span>[Partner brand]</span></div>
+  </section>
+
+  <section class="pair">
+    <div>
+      <span class="eyebrow">Kind words</span>
+      <p class="quote">“I left feeling relaxed and rejuvenated and would absolutely recommend.”</p>
+      <span class="attrib">H Patterson <span class="plus">+</span> Grounded in May</span>
+    </div>
+    <div id="notes" class="notes">
+      <span class="eyebrow">Notes from the mat</span>
+      <p>New dates first, and a short note from Olivia once a month.</p>
+      <form id="notes-form">
+        <label class="sr" for="fname">First name</label><input id="fname" name="fname" placeholder="First name" autocomplete="given-name" required>
+        <label class="sr" for="nemail">Email</label><input id="nemail" name="email" type="email" placeholder="Email" autocomplete="email" required>
+        <button type="submit">Sign up</button>
+      </form>
+      <p class="thanks" id="thanks" hidden>Preview only: sign-ups aren't saved yet.</p>
+    </div>
+  </section>
+
+  <section class="grid6" aria-hidden="true">
+    <div style="background:var(--stone)"></div><div style="background:var(--stone-2)"></div><div style="background:var(--sage)"></div><div style="background:var(--stone)"></div><div style="background:var(--stone-2)"></div><div style="background:var(--sand)"></div>
+  </section>
+</main>
+<script src="/assets/notes.js" defer></script>

@@ -1,0 +1,21 @@
+# Yogaveta: Cloudflare Worker with static assets, the same model as Go Metabolic.
+# No _worker.js yet. The site is static; a Worker is added in phase 2 for the
+# admin, bookings and newsletter sign-up.
+name               = "yogaveta-website"
+compatibility_date = "2026-08-01"
+
+[assets]
+directory          = "./_site"
+# Canonical URL shape: /about not /about/. Must match the canonicalPath filter
+# in .eleventy.js.
+html_handling      = "drop-trailing-slash"
+not_found_handling = "404-page"
+
+# STAGING: no routes. `npm run deploy` publishes to
+# yogaveta-website.<your-subdomain>.workers.dev only. yogaveta.com stays on
+# Squarespace until the launch gate in docs/plan.md is passed. At launch, move
+# DNS to Cloudflare and add:
+# routes = [
+#   { pattern = "yogaveta.com/*",     zone_name = "yogaveta.com" },
+#   { pattern = "www.yogaveta.com/*", zone_name = "yogaveta.com" }
+# ]
